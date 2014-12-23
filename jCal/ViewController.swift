@@ -25,7 +25,7 @@ class ViewController: UIViewController {
             preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alertController, animated: true, completion:nil)
-        println("Show Message")
+        println("Showing Message")
     }
 }
 
