@@ -20,13 +20,29 @@ func get_days_since_abolition() -> Int {
     let dateFormatter = NSDateFormatter()
     dateFormatter.dateFormat = "MM-dd-yyyy"
     let startDate:NSDate! = dateFormatter.dateFromString(monarch_abolishion_date)
+    
     let endDate:NSDate! = dateFormatter.dateFromString(date_string)
     let cal = NSCalendar.currentCalendar()
     let unit:NSCalendarUnit = .DayCalendarUnit
     var comp = cal.components(unit, fromDate: startDate, toDate: endDate, options: nil)
-    
     let total_days = Int(comp.day) // verify
     return total_days
+}
+
+func get_days_between_abolition(date_string: String) -> Int {
+    let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+    var monarch_abolishion_date = "9-21-1792"
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateFormat = "MM-dd-yyyy"
+    let startDate:NSDate! = dateFormatter.dateFromString(monarch_abolishion_date)
+    let endDate:NSDate! = dateFormatter.dateFromString(date_string)
+    let cal = NSCalendar.currentCalendar()
+    let unit:NSCalendarUnit = .DayCalendarUnit
+    var comp = cal.components(unit, fromDate: startDate, toDate: endDate, options: nil)
+    let total_days = Int(comp.day) // verify
+    return total_days
+    
+    
 }
 
 func rnConverter(arab_number: Int) -> String

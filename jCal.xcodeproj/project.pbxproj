@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2458D91B1A59F47000895E99 /* DateModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458D91A1A59F47000895E99 /* DateModule.swift */; };
+		2458D91D1A59F51400895E99 /* DayNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458D91C1A59F51400895E99 /* DayNames.swift */; };
+		2458D91F1A59F56D00895E99 /* TestData2015.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458D91E1A59F56D00895E99 /* TestData2015.swift */; };
+		2458D9201A59F79800895E99 /* DateModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458D91A1A59F47000895E99 /* DateModule.swift */; };
 		24BDDF031A49E56500C66224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDDF021A49E56500C66224 /* AppDelegate.swift */; };
 		24BDDF051A49E56500C66224 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BDDF041A49E56500C66224 /* ViewController.swift */; };
 		24BDDF081A49E56500C66224 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BDDF061A49E56500C66224 /* Main.storyboard */; };
@@ -25,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2458D91A1A59F47000895E99 /* DateModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateModule.swift; sourceTree = "<group>"; };
+		2458D91C1A59F51400895E99 /* DayNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayNames.swift; sourceTree = "<group>"; };
+		2458D91E1A59F56D00895E99 /* TestData2015.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestData2015.swift; sourceTree = "<group>"; };
 		24BDDEFD1A49E56500C66224 /* jCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24BDDF011A49E56500C66224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24BDDF021A49E56500C66224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +84,8 @@
 			children = (
 				24BDDF021A49E56500C66224 /* AppDelegate.swift */,
 				24BDDF041A49E56500C66224 /* ViewController.swift */,
+				2458D91A1A59F47000895E99 /* DateModule.swift */,
+				2458D91C1A59F51400895E99 /* DayNames.swift */,
 				24BDDF061A49E56500C66224 /* Main.storyboard */,
 				24BDDF091A49E56500C66224 /* Images.xcassets */,
 				24BDDF001A49E56500C66224 /* Supporting Files */,
@@ -96,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				24BDDF151A49E56500C66224 /* jCalTests.swift */,
+				2458D91E1A59F56D00895E99 /* TestData2015.swift */,
 				24BDDF131A49E56500C66224 /* Supporting Files */,
 			);
 			path = jCalTests;
@@ -211,6 +221,8 @@
 			files = (
 				24BDDF051A49E56500C66224 /* ViewController.swift in Sources */,
 				24BDDF031A49E56500C66224 /* AppDelegate.swift in Sources */,
+				2458D91B1A59F47000895E99 /* DateModule.swift in Sources */,
+				2458D91D1A59F51400895E99 /* DayNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +231,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BDDF161A49E56500C66224 /* jCalTests.swift in Sources */,
+				2458D91F1A59F56D00895E99 /* TestData2015.swift in Sources */,
+				2458D9201A59F79800895E99 /* DateModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

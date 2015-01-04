@@ -20,16 +20,11 @@ class jCalTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
+    func testDateConversion() {
+        for (greg_string, french_date) in greg2jac {
+            let total_days = get_days_between_abolition(greg_string)
+            let today_french_date = computeFrenchDate(total_days)
+            XCTAssertTrue(today_french_date == french_date, "Pass")
         }
     }
-    
 }
