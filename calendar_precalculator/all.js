@@ -33,8 +33,7 @@ function computeFrenchDate(x)
     var answer, daycount, revday, revmthnum, revmonth, revyr, romnum, totalDays;
     var leap = new Boolean();
     var test = new Boolean();
-
-    test = false;                   //for debugging, change "test" to true to output to the screen every iteration of the while loop below
+    test = false;   //for debugging, change "test" to true to output to the screen every iteration of the while loop below
 
     totalDays = x;
     daycount = 1;                               
@@ -203,4 +202,5 @@ function rnConverter(aN)
         i = i + 1 ;}                                   
     return romanNumeral;
     }
+
 precalculate_all();

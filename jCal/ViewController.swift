@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         var today_name = "C'est un jour complémentaire!"
         let today_french_date : NSString! = greg2jac[date_string]
         for (french_date, day_name) in jacobin_day2name {
-            if (today_french_date as NSString).containsString(french_date) {
+            if today_french_date.hasPrefix(french_date) {
                 today_name = "C'est " + day_name + " aujourd'hui"
             }
         }
