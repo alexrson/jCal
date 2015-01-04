@@ -1,3 +1,7 @@
+# Vim
+*.swp
+# Python
+*.pyc
 # Xcode
 #
 build/
