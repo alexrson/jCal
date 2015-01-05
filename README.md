@@ -1,6 +1,7 @@
 jCal - The French Republican Calendar App
 ====
 ![banner](https://raw.githubusercontent.com/alexrson/jCal/master/Lagrange_portrait.jpg)
+
 **Mathematician and astronomer Joeseph-Louis, Lagrange one of the co-creators of the French Republican calendar**
 
 This is an app which gives the user the current date in the French Republican Calendar, also known as the Jacobin Calendar, also known as the French Revolutionary Calendar, known in French as la calendrier révolutionnaire français.
