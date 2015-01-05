@@ -15,11 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let today = self.get_date_name()
-        // set label text
         self.DateLabel?.text = today.today_french_date
         self.DayNameLabel?.text = today.today_name
-        println(today.today_name)
-        println(self.DayNameLabel?.text)
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,11 +24,9 @@ class ViewController: UIViewController {
     }
 
     func get_date_name() -> (today_french_date: NSString, today_name: NSString) {
-       
-        var today_name = "C'est un jour complémentaire!"
-      
         let total_days = get_days_since_abolition()
         let today_french_date = computeFrenchDate(total_days)
+        var today_name = "C'est un jour complémentaire!"
         for (french_date, day_name) in jacobin_day2name {
             if today_french_date.hasPrefix(french_date) {
                 today_name = "C'est " + day_name + " aujourd'hui."

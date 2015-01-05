@@ -85,7 +85,6 @@
 				24BDDF021A49E56500C66224 /* AppDelegate.swift */,
 				24BDDF041A49E56500C66224 /* ViewController.swift */,
 				2458D91A1A59F47000895E99 /* DateModule.swift */,
-				2458D91C1A59F51400895E99 /* DayNames.swift */,
 				24BDDF061A49E56500C66224 /* Main.storyboard */,
 				24BDDF091A49E56500C66224 /* Images.xcassets */,
 				24BDDF001A49E56500C66224 /* Supporting Files */,
@@ -96,6 +95,7 @@
 		24BDDF001A49E56500C66224 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2458D91C1A59F51400895E99 /* DayNames.swift */,
 				24BDDF011A49E56500C66224 /* Info.plist */,
 			);
 			name = "Supporting Files";
