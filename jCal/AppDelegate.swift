@@ -12,16 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
-    func timerFunc(timer:NSTimer!) {
-        var rootViewController = self.window!.rootViewController
-        var storyBoard = rootViewController?.storyboard
-        var controller = storyBoard?.instantiateViewControllerWithIdentifier("ViewController")
-        controller?.update()
-    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        let myTimer = NSTimer(timeInterval: 0.5, target: self, selector: "timerFunc:", userInfo: nil, repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(myTimer, forMode: NSRunLoopCommonModes)
         return true
     }
 

@@ -10,70 +10,46 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    @IBOutlet var Controller: UISegmentedControl!
     @IBOutlet var DateLabel : UILabel?
     @IBOutlet var DayNameLabel : UILabel?
-    @IBOutlet var TimeLabel : UILabel?
+    @IBOutlet var days_since_bourbon : UILabel!
+    @IBOutlet var displayTimeLabel: UILabel!
+    @IBAction func ChangeLeap(sender: AnyObject) {
+        
+    }
+    var timer = NSTimer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.TimeLabel?.text = "Set init"
         self.update()
+        let aSelector : Selector = "update"
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
     }
     
     func update() {
-       
-        let today = self.get_date_name()
+        let today = self.get_date_name(Controller.selectedSegmentIndex)
         self.DateLabel?.text = today.today_french_date
         self.DayNameLabel?.text = today.today_name
-        let decimal_time_string = self.get_decimal_time()
-        self.TimeLabel?.text = decimal_time_string
-        println(decimal_time_string)
-        println(self.isViewLoaded())
-        // TODO: create a xib file or something
-        
-        
+        var decimal_time = get_decimal_time()
+        displayTimeLabel.text = decimal_time
+        var formatter = NSNumberFormatter()
+        formatter.numberStyle = .DecimalStyle
+        var formated_num_days = formatter.stringFromNumber(get_days_since_abolition())
+        days_since_bourbon.text = "Il y a " + formated_num_days! + " jours depuis l'ancien régime."
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func get_decimal_time() -> NSString {
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: date)
-        let hours = components.hour
-        let minutes = components.minute
-        let seconds = components.second
-        var day_fraction = Float(hours) / 24.0
-        day_fraction += (Float(minutes) / 60.0) / 24.0
-        day_fraction += (Float(seconds) / 3600.0) / 24.0
-        let decimal_hour = Int(day_fraction * 10.0)
-        day_fraction -= Float(decimal_hour) / 10.0
-        let decimal_minutes = Int(day_fraction * 1000.0)
-        day_fraction -= Float(decimal_minutes) / 1000.0
-        let decimal_seconds = Int(day_fraction * 100000.0)
-        var minute_zero_pad = ""
-        var second_zero_pad = ""
-        // TODO: see if swift has string formatting tools
-        if decimal_minutes < 10 {
-            minute_zero_pad = "0"
-        }
-        if decimal_seconds < 10 {
-            second_zero_pad = "0"
-        }
-        return (String(decimal_hour) + ":" +
-                minute_zero_pad + String(decimal_minutes) + ":" +
-                second_zero_pad + String(decimal_seconds))
-    }
 
-    func get_date_name() -> (today_french_date: NSString, today_name: NSString) {
-        let total_days = get_days_since_abolition()
+    func get_date_name(leap_add: Int) -> (today_french_date: NSString, today_name: NSString) {
+        let total_days = get_days_since_abolition() + leap_add
         let today_french_date = computeFrenchDate(total_days)
         var today_name = "C'est un jour complémentaire!"
         for (french_date, day_name) in jacobin_day2name {
             if today_french_date.hasPrefix(french_date) {
-                today_name = "C'est " + day_name + " aujourd'hui."
+                today_name = "Aujourd'hui est le jour de " + day_name + "."
             }
         }
         return (today_french_date, today_name)

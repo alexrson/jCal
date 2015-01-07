@@ -8,6 +8,34 @@
 
 import Foundation
 
+func get_decimal_time() -> NSString {
+    let date = NSDate()
+    let calendar = NSCalendar.currentCalendar()
+    let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: date)
+    let hours = components.hour
+    let minutes = components.minute
+    let seconds = components.second
+    var day_fraction = Float(hours) / 24.0
+    day_fraction += (Float(minutes) / 60.0) / 24.0
+    day_fraction += (Float(seconds) / 3600.0) / 24.0
+    let decimal_hour = Int(day_fraction * 10.0)
+    day_fraction -= Float(decimal_hour) / 10.0
+    let decimal_minutes = Int(day_fraction * 1000.0)
+    day_fraction -= Float(decimal_minutes) / 1000.0
+    let decimal_seconds = Int(day_fraction * 100000.0)
+    var minute_zero_pad = ""
+    var second_zero_pad = ""
+    if decimal_minutes < 10 {
+        minute_zero_pad = "0"
+    }
+    if decimal_seconds < 10 {
+        second_zero_pad = "0"
+    }
+    return ("Décimal temps: " + String(decimal_hour) + ":" +
+        minute_zero_pad + String(decimal_minutes) + ":" +
+        second_zero_pad + String(decimal_seconds))
+}
+
 func get_days_since_abolition() -> Int {
     let date = NSDate()
     let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
