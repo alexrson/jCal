@@ -22,17 +22,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.update()
         let aSelector : Selector = "update"
         timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
     }
     
     func update() {
+        // Date
         let today = self.get_date_name(Controller.selectedSegmentIndex)
         self.DateLabel?.text = today.today_french_date
+        // Day Name
         self.DayNameLabel?.text = today.today_name
+        // Decimal Time
         var decimal_time = get_decimal_time()
         displayTimeLabel.text = decimal_time
+        // Days elapsed
         var formatter = NSNumberFormatter()
         formatter.numberStyle = .DecimalStyle
         var formated_num_days = formatter.stringFromNumber(get_days_since_abolition())
@@ -44,7 +47,7 @@ class ViewController: UIViewController {
     }
 
     func get_date_name(leap_add: Int) -> (today_french_date: NSString, today_name: NSString) {
-        let total_days = get_days_since_abolition() + leap_add
+        let total_days = get_days_since_abolition() - leap_add + 1
         let today_french_date = computeFrenchDate(total_days)
         var today_name = "C'est un jour complémentaire!"
         for (french_date, day_name) in jacobin_day2name {
