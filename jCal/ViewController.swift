@@ -26,8 +26,8 @@ class ViewController: UIViewController {
     func updateArbitrary() {
         var greg_date = gregDatePicker.date
         let arbitrary_french_date = get_fdate(greg_date, Controller.selectedSegmentIndex)
-        println(arbitrary_french_date.french_name)
-        arbitraryDateInJacobin.text = arbitrary_french_date.french_date + ", " + arbitrary_french_date.french_name
+        arbitraryDateInJacobin.text = (arbitrary_french_date.french_date +
+            ", " + arbitrary_french_date.french_name)
     }
     
     @IBAction func ChangeLeap(sender: AnyObject) {
@@ -36,7 +36,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let aSelector : Selector = "update"
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01,
+            target: self, selector: aSelector, userInfo: nil, repeats: true)
         arbitraryDateInJacobin.text = ""
     }
     
@@ -44,11 +45,12 @@ class ViewController: UIViewController {
         // Date
         let today = get_today_fdate(Controller.selectedSegmentIndex)
         self.DateLabel?.text = today.french_date
-        // Day Name
         self.DayNameLabel?.text = "Aujourd'hui est le jour de " + today.french_name + "."
+        
         // Decimal Time
         var decimal_time = get_decimal_time()
         displayTimeLabel.text = decimal_time
+        
         // Days elapsed
         var formatter = NSNumberFormatter()
         formatter.numberStyle = .DecimalStyle
@@ -59,8 +61,4 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
 }
-
-

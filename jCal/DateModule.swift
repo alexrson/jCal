@@ -25,9 +25,9 @@ func get_fdate(greg_date: NSDate, leap_method: Int) -> (french_date: NSString, f
     for (_french_date, day_name) in jacobin_day2name {
         if french_date.hasPrefix(_french_date) {
             french_name = day_name
+            break
         }
     }
-    println(french_name)
     return (french_date, french_name)
 }
 
