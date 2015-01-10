@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2433BBE31A61E7CF00E56907 /* DayNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458D91C1A59F51400895E99 /* DayNames.swift */; };
 		2458D91B1A59F47000895E99 /* DateModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458D91A1A59F47000895E99 /* DateModule.swift */; };
 		2458D91D1A59F51400895E99 /* DayNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458D91C1A59F51400895E99 /* DayNames.swift */; };
 		2458D91F1A59F56D00895E99 /* TestData2015.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2458D91E1A59F56D00895E99 /* TestData2015.swift */; };
@@ -233,6 +234,7 @@
 				24BDDF161A49E56500C66224 /* jCalTests.swift in Sources */,
 				2458D91F1A59F56D00895E99 /* TestData2015.swift in Sources */,
 				2458D9201A59F79800895E99 /* DateModule.swift in Sources */,
+				2433BBE31A61E7CF00E56907 /* DayNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

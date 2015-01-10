@@ -8,53 +8,28 @@
 
 import Foundation
 
-func get_decimal_time() -> NSString {
-    let date = NSDate()
-    let calendar = NSCalendar.currentCalendar()
-    let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: date)
-    let hours = components.hour
-    let minutes = components.minute
-    let seconds = components.second
-    var day_fraction = Float(hours) / 24.0
-    day_fraction += (Float(minutes) / 60.0) / 24.0
-    day_fraction += (Float(seconds) / 3600.0) / 24.0
-    let decimal_hour = Int(day_fraction * 10.0)
-    day_fraction -= Float(decimal_hour) / 10.0
-    let decimal_minutes = Int(day_fraction * 1000.0)
-    day_fraction -= Float(decimal_minutes) / 1000.0
-    let decimal_seconds = Int(day_fraction * 100000.0)
-    var minute_zero_pad = ""
-    var second_zero_pad = ""
-    if decimal_minutes < 10 {
-        minute_zero_pad = "0"
-    }
-    if decimal_seconds < 10 {
-        second_zero_pad = "0"
-    }
-    return ("Décimal temps: \n" + String(decimal_hour) + ":" +
-        minute_zero_pad + String(decimal_minutes) + ":" +
-        second_zero_pad + String(decimal_seconds))
+func get_today_fdate(leap_add: Int) -> (french_date: NSString, french_name: NSString) {
+    return get_fdate(NSDate(),leap_add)
 }
 
-func get_republican_date(greg_date: NSDate, leap_method: Int) -> (french_date: NSString, french_name: NSString) {
+func get_fdate(greg_date: NSDate, leap_method: Int) -> (french_date: NSString, french_name: NSString) {
     let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
     let components = NSCalendar.currentCalendar().components(flags, fromDate: greg_date)
     let year = components.year
     let month = components.month
     let day = components.day
     let date_string = String(month) + "-" + String(day) + "-" + String(year)
-    var num_days = get_days_between_abolition(date_string) - leap_method + 1
+    var num_days = get_days_between_abolition(date_string)
     let french_date = computeFrenchDate(num_days)
     var french_name = "C'est un jour complémentaire!"
-    for (french_date, day_name) in jacobin_day2name {
-        if french_date.hasPrefix(french_date) {
-            french_name = "Aujourd'hui est le jour de " + day_name + "."
+    for (_french_date, day_name) in jacobin_day2name {
+        if french_date.hasPrefix(_french_date) {
+            french_name = day_name
         }
     }
+    println(french_name)
     return (french_date, french_name)
-    
 }
-
 
 func get_days_since_abolition() -> Int {
     let date = NSDate()
@@ -249,4 +224,32 @@ func computeFrenchDate(total_days : Int) -> String
     var romnum = rnConverter(revyr)
     var answer = String(revday) + " " + String(revmonth) + " " + romnum
     return answer
+}
+
+func get_decimal_time() -> NSString {
+    let date = NSDate()
+    let calendar = NSCalendar.currentCalendar()
+    let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: date)
+    let hours = components.hour
+    let minutes = components.minute
+    let seconds = components.second
+    var day_fraction = Float(hours) / 24.0
+    day_fraction += (Float(minutes) / 60.0) / 24.0
+    day_fraction += (Float(seconds) / 3600.0) / 24.0
+    let decimal_hour = Int(day_fraction * 10.0)
+    day_fraction -= Float(decimal_hour) / 10.0
+    let decimal_minutes = Int(day_fraction * 1000.0)
+    day_fraction -= Float(decimal_minutes) / 1000.0
+    let decimal_seconds = Int(day_fraction * 100000.0)
+    var minute_zero_pad = ""
+    var second_zero_pad = ""
+    if decimal_minutes < 10 {
+        minute_zero_pad = "0"
+    }
+    if decimal_seconds < 10 {
+        second_zero_pad = "0"
+    }
+    return ("Décimal temps: \n" + String(decimal_hour) + ":" +
+        minute_zero_pad + String(decimal_minutes) + ":" +
+        second_zero_pad + String(decimal_seconds))
 }
