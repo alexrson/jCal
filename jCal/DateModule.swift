@@ -36,6 +36,26 @@ func get_decimal_time() -> NSString {
         second_zero_pad + String(decimal_seconds))
 }
 
+func get_republican_date(greg_date: NSDate, leap_method: Int) -> (french_date: NSString, french_name: NSString) {
+    let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+    let components = NSCalendar.currentCalendar().components(flags, fromDate: greg_date)
+    let year = components.year
+    let month = components.month
+    let day = components.day
+    let date_string = String(month) + "-" + String(day) + "-" + String(year)
+    var num_days = get_days_between_abolition(date_string) - leap_method + 1
+    let french_date = computeFrenchDate(num_days)
+    var french_name = "C'est un jour complémentaire!"
+    for (french_date, day_name) in jacobin_day2name {
+        if french_date.hasPrefix(french_date) {
+            french_name = "Aujourd'hui est le jour de " + day_name + "."
+        }
+    }
+    return (french_date, french_name)
+    
+}
+
+
 func get_days_since_abolition() -> Int {
     let date = NSDate()
     let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit

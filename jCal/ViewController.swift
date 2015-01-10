@@ -15,8 +15,27 @@ class ViewController: UIViewController {
     @IBOutlet var DayNameLabel : UILabel?
     @IBOutlet var days_since_bourbon : UILabel!
     @IBOutlet var displayTimeLabel: UILabel!
-    @IBAction func ChangeLeap(sender: AnyObject) {
+    @IBOutlet var gregDatePicker: UIDatePicker!
+    @IBOutlet var arbitraryDateInJacobin: UILabel!
+    
+    
+    
+    @IBAction func changeArbitraryDate(sender: UIDatePicker) {
+        updateArbitrary()
+        //var greg_date = gregDatePicker.date
+        //let arbitrary_french_date = get_republican_date(greg_date, Controller.selectedSegmentIndex)
+        //arbitraryDateInJacobin.text = arbitrary_french_date.french_date
         
+    }
+    func updateArbitrary() {
+        var greg_date = gregDatePicker.date
+        let arbitrary_french_date = get_republican_date(greg_date, Controller.selectedSegmentIndex)
+        arbitraryDateInJacobin.text = arbitrary_french_date.french_date
+    }
+    
+    @IBAction func ChangeLeap(sender: AnyObject) {
+        update()
+        updateArbitrary()
     }
     var timer = NSTimer()
     
@@ -24,6 +43,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let aSelector : Selector = "update"
         timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        updateArbitrary()
     }
     
     func update() {
