@@ -8,7 +8,7 @@
         <!--Time-->
         <scene sceneID="lua-KR-15R">
             <objects>
-                <viewController id="toI-iZ-7dH" customClass="TimeViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimeViewController" id="toI-iZ-7dH" customClass="TimeViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d4p-rc-jmx"/>
                         <viewControllerLayoutGuide type="bottom" id="ubg-iU-AtX"/>
@@ -38,7 +38,7 @@
         <!--Date-->
         <scene sceneID="ZkN-1F-a89">
             <objects>
-                <viewController id="Vsh-7A-ma1" customClass="DateViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DateViewController" id="Vsh-7A-ma1" customClass="DateViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eYR-6h-XCW"/>
                         <viewControllerLayoutGuide type="bottom" id="3Bd-Ap-YZ0"/>
@@ -96,7 +96,7 @@
         <!--ViewController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="ViewController" title="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="LookupViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LookupViewController" title="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="LookupViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -149,7 +149,7 @@
         <!--About-->
         <scene sceneID="Tgi-9X-daG">
             <objects>
-                <viewController id="9zc-ka-z5J" customClass="AboutViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutViewController" id="9zc-ka-z5J" customClass="AboutViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B4X-ue-GCO"/>
                         <viewControllerLayoutGuide type="bottom" id="0H2-rl-Qzg"/>
