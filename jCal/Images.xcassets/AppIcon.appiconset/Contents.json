@@ -11,15 +11,14 @@
       "scale" : "2x"
     },
     {
-      "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Lagrange.120x120.png",
+      "size" : "60x60",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Lagrange.180x180.png",
+      "filename" : "liberty-icon@2x-2.png",
       "scale" : "3x"
     }
   ],

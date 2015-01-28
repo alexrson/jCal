@@ -15,17 +15,6 @@ class DateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         update()
-        // go right
-        let cSelector : Selector = "go_right:"
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: cSelector)
-        leftSwipe.direction = UISwipeGestureRecognizerDirection.Left
-        view.addGestureRecognizer(leftSwipe)
-    }
-    
-    @IBAction func go_right(sender: AnyObject) {
-        let timeViewController = self.storyboard!.instantiateViewControllerWithIdentifier("TimeViewController") as  TimeViewController
-        timeViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
-        self.presentViewController(timeViewController, animated:true, completion:nil)
     }
     
     override func didReceiveMemoryWarning() {

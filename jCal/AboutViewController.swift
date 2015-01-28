@@ -12,18 +12,6 @@ class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // go left
-        let cSelectorL : Selector = "go_left:"
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: cSelectorL)
-        rightSwipe.direction = UISwipeGestureRecognizerDirection.Right
-        view.addGestureRecognizer(rightSwipe)
-    }
-    
-    @IBAction func go_left(sender: AnyObject) {
-        let leftwardVC = self.storyboard!.instantiateViewControllerWithIdentifier("LookupViewController") as LookupViewController
-        leftwardVC.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-        self.presentViewController(leftwardVC, animated:true, completion:nil)
     }
 
 

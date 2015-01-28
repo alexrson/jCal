@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "clock-timer-7.png"
+      "filename" : "clock@45px.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "clock-timer-7-1.png"
+      "filename" : "clock@90px.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "clock-timer-7-1-1.png"
+      "filename" : "clock@180px.png"
     }
   ],
   "info" : {
