@@ -181,14 +181,40 @@
                         <viewControllerLayoutGuide type="bottom" id="0H2-rl-Qzg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="obp-J2-Szo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbx-xe-SXW">
-                                <rect key="frame" x="8" y="12" width="304" height="576"/>
+                                <rect key="frame" x="8" y="12" width="304" height="725"/>
                                 <subviews>
-                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="33" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWe-nt-rNY">
-                                        <rect key="frame" x="15" y="-39" width="275" height="643"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-dM-ixI">
+                                        <rect key="frame" x="15" y="25" width="139" height="37"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="About">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="26" name="Didot"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZB-WS-M8Z">
+                                        <rect key="frame" x="152" y="610" width="138" height="21"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="-Alexander Robertson">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Avenir-Book"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="46" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWe-nt-rNY">
+                                        <rect key="frame" x="15" y="8" width="275" height="643"/>
                                         <attributedString key="attributedText">
                                             <fragment>
                                                 <string key="content">This app gives the user the current date and time using the French Republican Calendar, also known as the Jacobin Calendar, also known as the French Revolutionary Calendar, known in French as la calendrier révolutionnaire français. </string>
@@ -218,36 +244,10 @@ Cgo
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">The French Republican Calendar was used officially from 1793 through the end of 1805. The calendar starts with the beginning of the Republican Era and the abolition of the Bourbon monarchy on September 22nd 1792. It was created by a commission headed by Gilbert Romme. Along with the adoption of the Republican calendar the Jacobins also instituted a number of other reforms with the goals of eliminating traces of Ancien Régime influence and adopting decimal unit schemes. These reforms include the metric system, decimal time and decimal currency. Over the years of French Republic and into the Napoleonic Era the more revolutionary of these reforms were eliminated partly as part of a rapprochement with the Vatican (which strongly favored the seven day week) and partly as a broader tempering of revolutionary fervor. Napoleon abolished the calendar wholesale in 1805, by which time Republicanism itself had long been a dead letter. However, the metric system of units and decimal currency and many of the reforms instututed by Napoleon as Emperor are alive and well to this day.</mutableString>
+                                                <mutableString key="content">The French Republican Calendar was used officially from 1793 through the end of 1805. The calendar starts with the beginning of the Republican Era and the abolition of the Bourbon monarchy on September 22nd 1792. It was created by a commission headed by Gilbert Romme. Along with the adoption of the Republican calendar the Jacobins also instituted a number of other reforms with the goals of eliminating traces of Ancien Régime influence and adopting decimal unit schemes. These reforms include the metric system, decimal time and decimal currency. Over the years of French Republic and into the Napoleonic Era the more revolutionary of these reforms were eliminated partly as part of a rapprochement with the Vatican (which strongly favored the seven day week) and partly as a broader tempering of revolutionary fervor. Napoleon abolished the calendar wholesale in 1805, by which time Republicanism itself had long been a dead letter. However, the metric system of units and decimal currency and many of the reforms instituted by Napoleon as Emperor are alive and well to this day.</mutableString>
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="12" name="Avenir-Book"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZB-WS-M8Z">
-                                        <rect key="frame" x="158" y="541" width="138" height="21"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="-Alexander Robertson">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="12" name="Avenir-Book"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-dM-ixI">
-                                        <rect key="frame" x="15" y="0.0" width="139" height="37"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="About">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="26" name="Didot"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
@@ -263,7 +263,7 @@ Cgo
                         <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                     </tabBarItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1568"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="scrollView" destination="Sbx-xe-SXW" id="GFs-CU-4Lq"/>
                     </connections>

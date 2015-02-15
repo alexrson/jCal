@@ -18,7 +18,7 @@ class AboutViewController: UIViewController {
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.numberOfTouchesRequired = 1
         scrollView.addGestureRecognizer(doubleTapRecognizer)
-        scrollView.contentSize = CGSize(width: 304, height: 577)
+        scrollView.contentSize = CGSize(width: 304, height: 1050)
     }
 
     override func didReceiveMemoryWarning() {
