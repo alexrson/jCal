@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM6-83-hQl">
-                                <rect key="frame" x="6" y="237" width="309" height="94"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM6-83-hQl">
+                                <rect key="frame" x="6" y="220" width="309" height="127"/>
                                 <attributedString key="attributedText">
                                     <fragment content="00:00:00">
                                         <attributes>
@@ -33,7 +33,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Time" image="clock-timer-7" id="HOg-b3-kBs"/>
+                    <tabBarItem key="tabBarItem" title="Time" image="clock-timer-7" id="HOg-b3-kBs">
+                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="displayTimeLabel" destination="CM6-83-hQl" id="pDh-30-5I1"/>
                     </connections>
@@ -54,26 +56,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-Vb-lGi">
-                                <rect key="frame" x="27" y="178" width="266" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-Vb-lGi">
+                                <rect key="frame" x="27" y="220" width="266" height="127"/>
                                 <attributedString key="attributedText">
                                     <fragment content="DateLabel">
                                         <attributes>
                                             <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="21" name="Didot"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay8-gZ-Lqy">
-                                <rect key="frame" x="17" y="282" width="286" height="62"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="DayName">
-                                        <attributes>
-                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="20" name="Didot"/>
+                                            <font key="NSFont" size="27" name="Didot"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -83,10 +72,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Date" image="calendar-7" id="AbS-UT-zUS"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Date" image="calendar-7" id="AbS-UT-zUS">
+                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="DateLabel" destination="jIu-Vb-lGi" id="eJk-FD-YQZ"/>
-                        <outlet property="DayNameLabel" destination="Ay8-gZ-Lqy" id="sHm-ul-Eam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMA-7Z-aYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,13 +116,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-JF-g9M">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-JF-g9M">
                                 <rect key="frame" x="9" y="251" width="306" height="81"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Arbitrary date label">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="Didot"/>
+                                            <font key="NSFont" size="23" name="Didot"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -153,12 +143,12 @@
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPU-Pi-oCu">
-                                <rect key="frame" x="33" y="46" width="254" height="21"/>
+                                <rect key="frame" x="7" y="28" width="306" height="56"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Convert a Gregorian Date">
                                         <attributes>
                                             <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="17" name="Didot"/>
+                                            <font key="NSFont" size="26" name="Didot"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -168,10 +158,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Look Up" image="search-7" id="qvU-wY-2Hf"/>
+                    <tabBarItem key="tabBarItem" title="Look Up" image="search-7" id="qvU-wY-2Hf">
+                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="DateLabel" destination="jIu-Vb-lGi" id="f0e-nl-wFi"/>
-                        <outlet property="DayNameLabel" destination="Ay8-gZ-Lqy" id="yFB-xT-M7r"/>
                         <outlet property="arbitraryDateInJacobin" destination="GbS-JF-g9M" id="2Mi-q8-C3Y"/>
                         <outlet property="displayTimeLabel" destination="CM6-83-hQl" id="yGq-Sh-ObL"/>
                         <outlet property="gregDatePicker" destination="R60-yf-KCe" id="93R-CB-sLs"/>
@@ -250,7 +241,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="text-align-justify-7" id="rfp-vg-edz"/>
+                    <tabBarItem key="tabBarItem" title="About" image="text-align-justify-7" id="rfp-vg-edz">
+                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G4v-R0-AAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
