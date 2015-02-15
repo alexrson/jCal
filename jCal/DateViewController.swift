@@ -27,4 +27,7 @@ class DateViewController: UIViewController {
         self.DateLabel?.text = today.french_date
         self.DayNameLabel?.text = today.french_name
     }
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

@@ -17,8 +17,6 @@ class LookupViewController: UIViewController {
         updateArbitrary()
     }
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         updateArbitrary()
@@ -32,5 +30,8 @@ class LookupViewController: UIViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 }
