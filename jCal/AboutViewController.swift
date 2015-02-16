@@ -18,12 +18,13 @@ class AboutViewController: UIViewController {
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.numberOfTouchesRequired = 1
         scrollView.addGestureRecognizer(doubleTapRecognizer)
-        scrollView.contentSize = CGSize(width: 304, height: 1050)
+        scrollView.contentSize = CGSize(width: 304, height: 1800) // TODO how could this height be set programmatically?
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

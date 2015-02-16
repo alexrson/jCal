@@ -10,8 +10,8 @@
             <objects>
                 <viewController storyboardIdentifier="TimeViewController" id="toI-iZ-7dH" customClass="TimeViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="d4p-rc-jmx"/>
-                        <viewControllerLayoutGuide type="bottom" id="ubg-iU-AtX"/>
+                        <viewControllerLayoutGuide type="top" id="Z9v-hZ-Jqq"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Q4-61-KyH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iE2-vy-xBu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -33,11 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Time" image="clock-timer-7" id="HOg-b3-kBs">
-                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Time" image="clock40" id="HOg-b3-kBs"/>
                     <connections>
                         <outlet property="displayTimeLabel" destination="CM6-83-hQl" id="pDh-30-5I1"/>
+                        <outlet property="timeTabBar" destination="HOg-b3-kBs" id="AH4-b2-0nQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vfn-tg-DXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -49,8 +48,8 @@
             <objects>
                 <viewController storyboardIdentifier="DateViewController" id="Vsh-7A-ma1" customClass="DateViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eYR-6h-XCW"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Bd-Ap-YZ0"/>
+                        <viewControllerLayoutGuide type="top" id="hC0-O1-Uc2"/>
+                        <viewControllerLayoutGuide type="bottom" id="1UJ-jj-uNy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6Xs-NB-o2u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -72,11 +71,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="Date" image="calendar-7" id="AbS-UT-zUS">
-                        <inset key="imageInsets" minX="3" minY="3" maxX="3" maxY="3"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" tag="1" title="Date" image="date35" id="AbS-UT-zUS"/>
                     <connections>
                         <outlet property="DateLabel" destination="jIu-Vb-lGi" id="eJk-FD-YQZ"/>
+                        <outlet property="dateTabItem" destination="AbS-UT-zUS" id="BaD-qc-4NC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMA-7Z-aYb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -86,9 +84,11 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Uat-eN-XXv">
             <objects>
-                <tabBarController id="31P-Kw-aXS" sceneMemberID="viewController">
+                <tabBarController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="31P-Kw-aXS" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="dVz-gh-3uG">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <tabBar key="tabBar" contentMode="redraw" id="dVz-gh-3uG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -109,8 +109,8 @@
             <objects>
                 <viewController storyboardIdentifier="LookupViewController" title="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="LookupViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="Cgc-I3-HEB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tcu-SV-3mo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -158,9 +158,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Look Up" image="search-7" id="qvU-wY-2Hf">
-                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Look Up" image="search35" id="qvU-wY-2Hf"/>
                     <connections>
                         <outlet property="DateLabel" destination="jIu-Vb-lGi" id="f0e-nl-wFi"/>
                         <outlet property="arbitraryDateInJacobin" destination="GbS-JF-g9M" id="2Mi-q8-C3Y"/>
@@ -177,15 +175,15 @@
             <objects>
                 <viewController storyboardIdentifier="AboutViewController" id="9zc-ka-z5J" customClass="AboutViewController" customModule="jCal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="B4X-ue-GCO"/>
-                        <viewControllerLayoutGuide type="bottom" id="0H2-rl-Qzg"/>
+                        <viewControllerLayoutGuide type="top" id="yEK-cv-ZY7"/>
+                        <viewControllerLayoutGuide type="bottom" id="oS3-rs-gfr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="obp-J2-Szo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbx-xe-SXW">
-                                <rect key="frame" x="8" y="12" width="304" height="725"/>
+                                <rect key="frame" x="8" y="0.0" width="304" height="1176"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFY-dM-ixI">
                                         <rect key="frame" x="15" y="25" width="139" height="37"/>
@@ -201,12 +199,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZB-WS-M8Z">
-                                        <rect key="frame" x="152" y="610" width="138" height="21"/>
+                                        <rect key="frame" x="152" y="891" width="138" height="21"/>
                                         <attributedString key="attributedText">
                                             <fragment content="-Alexander Robertson">
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="12" name="Avenir-Book"/>
+                                                    <font key="NSFont" size="14" name="Avenir-Book"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
@@ -214,21 +212,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="46" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWe-nt-rNY">
-                                        <rect key="frame" x="15" y="8" width="275" height="643"/>
+                                        <rect key="frame" x="15" y="78" width="275" height="797"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <string key="content">This app gives the user the current date and time using the French Republican Calendar, also known as the Jacobin Calendar, also known as the French Revolutionary Calendar, known in French as la calendrier révolutionnaire français. </string>
-                                                <attributes>
-                                                    <font key="NSFont" size="12" name="Avenir-Book"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment>
-                                                <string key="content" base64-UTF8="YES">
-Cg
+                                                <string key="content">This app gives the user the current date and time using the French Republican Calendar, also known as the Jacobin Calendar, also known as the French Revolutionary Calendar, known in French as la calendrier révolutionnaire français. 
 </string>
                                                 <attributes>
-                                                    <font key="NSFont" size="12" name="Calibri"/>
+                                                    <font key="NSFont" size="15" name="Avenir-Book"/>
+                                                    <font key="NSOriginalFont" size="11" name="Avenir-Book"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
@@ -237,7 +228,8 @@ Cg
 Cgo
 </string>
                                                 <attributes>
-                                                    <font key="NSFont" size="12" name="Calibri"/>
+                                                    <font key="NSFont" size="15" name="Avenir-Book"/>
+                                                    <font key="NSOriginalFont" size="11" name="Avenir-Book"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tailIndent="432" defaultTabInterval="36">
                                                         <tabStops/>
                                                     </paragraphStyle>
@@ -247,7 +239,8 @@ Cgo
                                                 <mutableString key="content">The French Republican Calendar was used officially from 1793 through the end of 1805. The calendar starts with the beginning of the Republican Era and the abolition of the Bourbon monarchy on September 22nd 1792. It was created by a commission headed by Gilbert Romme. Along with the adoption of the Republican calendar the Jacobins also instituted a number of other reforms with the goals of eliminating traces of Ancien Régime influence and adopting decimal unit schemes. These reforms include the metric system, decimal time and decimal currency. Over the years of French Republic and into the Napoleonic Era the more revolutionary of these reforms were eliminated partly as part of a rapprochement with the Vatican (which strongly favored the seven day week) and partly as a broader tempering of revolutionary fervor. Napoleon abolished the calendar wholesale in 1805, by which time Republicanism itself had long been a dead letter. However, the metric system of units and decimal currency and many of the reforms instituted by Napoleon as Emperor are alive and well to this day.</mutableString>
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="12" name="Avenir-Book"/>
+                                                    <font key="NSFont" size="15" name="Avenir-Book"/>
+                                                    <font key="NSOriginalFont" size="11" name="Avenir-Book"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                 </attributes>
                                             </fragment>
@@ -259,9 +252,7 @@ Cgo
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="text-align-justify-7" id="rfp-vg-edz">
-                        <inset key="imageInsets" minX="2" minY="2" maxX="2" maxY="2"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="About" image="about35" id="rfp-vg-edz"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
@@ -274,10 +265,10 @@ Cgo
         </scene>
     </scenes>
     <resources>
-        <image name="calendar-7" width="45" height="45"/>
-        <image name="clock-timer-7" width="45" height="45"/>
-        <image name="search-7" width="45" height="45"/>
-        <image name="text-align-justify-7" width="45" height="45"/>
+        <image name="about35" width="35" height="35"/>
+        <image name="clock40" width="40" height="40"/>
+        <image name="date35" width="35" height="35"/>
+        <image name="search35" width="35" height="35"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
