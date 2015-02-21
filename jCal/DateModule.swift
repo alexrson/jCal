@@ -249,7 +249,7 @@ func get_decimal_time() -> NSString {
     if decimal_seconds < 10 {
         second_zero_pad = "0"
     }
-    return ("Décimal temps: \n" + String(decimal_hour) + ":" +
+    return (String(decimal_hour) + ":" +
         minute_zero_pad + String(decimal_minutes) + ":" +
         second_zero_pad + String(decimal_seconds))
 }

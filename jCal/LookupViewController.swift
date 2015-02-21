@@ -28,9 +28,11 @@ class LookupViewController: UIViewController {
         arbitraryDateInJacobin.text = (arbitrary_french_date.french_date +
             ", " + arbitrary_french_date.french_name)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }

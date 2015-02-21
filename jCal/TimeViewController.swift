@@ -11,7 +11,6 @@ import UIKit
 
 class TimeViewController: UIViewController {
     @IBOutlet var displayTimeLabel: UILabel!
-    @IBOutlet var timeTabBar: UITabBarItem!
 
     var timer = NSTimer()
     
@@ -32,6 +31,7 @@ class TimeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
