@@ -23,10 +23,10 @@ class LookupViewController: UIViewController {
     }
     
     func updateArbitrary() {
-        var greg_date = gregDatePicker.date
+        let greg_date = gregDatePicker.date
         let arbitrary_french_date = get_fdate(greg_date, leap_method: 0)
-        arbitraryDateInJacobin.text = (arbitrary_french_date.french_date +
-            ", " + arbitrary_french_date.french_name)
+        arbitraryDateInJacobin.text = ((arbitrary_french_date.french_date as String) +
+            ", " + (arbitrary_french_date.french_name as String))
     }
     
     override func didReceiveMemoryWarning() {

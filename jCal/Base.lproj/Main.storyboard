@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="31P-Kw-aXS">
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Time-->
@@ -17,11 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="TWb-Qj-SlH">
-                                <rect key="frame" x="-177" y="-308" width="640" height="1185"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="TWb-Qj-SlH">
+                                <rect key="frame" x="-177" y="-308" width="675" height="1185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1185" id="E7G-cb-1bG"/>
+                                    <constraint firstAttribute="width" constant="675" id="dZ3-28-6w8"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3I-R0-vCu">
-                                <rect key="frame" x="23" y="169" width="274" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3I-R0-vCu">
+                                <rect key="frame" x="22" y="169" width="274" height="66"/>
                                 <attributedString key="attributedText">
                                     <fragment content="DÉCIMAL TEMPS:">
                                         <attributes>
@@ -33,8 +38,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM6-83-hQl">
-                                <rect key="frame" x="6" y="213" width="309" height="63"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM6-83-hQl">
+                                <rect key="frame" x="5" y="213" width="309" height="63"/>
                                 <attributedString key="attributedText">
                                     <fragment content="00:00:00">
                                         <attributes>
@@ -48,6 +53,18 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="f3I-R0-vCu" firstAttribute="top" secondItem="Z9v-hZ-Jqq" secondAttribute="bottom" constant="149" id="6Yq-xi-bCb"/>
+                            <constraint firstItem="2Q4-61-KyH" firstAttribute="top" secondItem="CM6-83-hQl" secondAttribute="bottom" constant="243" id="Cvy-R3-jAb"/>
+                            <constraint firstItem="f3I-R0-vCu" firstAttribute="leading" secondItem="iE2-vy-xBu" secondAttribute="leadingMargin" constant="6" id="E47-PG-xjr"/>
+                            <constraint firstItem="TWb-Qj-SlH" firstAttribute="centerY" secondItem="iE2-vy-xBu" secondAttribute="centerY" id="Mo2-Pg-zrn"/>
+                            <constraint firstItem="TWb-Qj-SlH" firstAttribute="centerX" secondItem="iE2-vy-xBu" secondAttribute="centerX" id="NOb-Ji-DgJ"/>
+                            <constraint firstItem="CM6-83-hQl" firstAttribute="centerX" secondItem="iE2-vy-xBu" secondAttribute="centerX" id="VSc-0Q-Udo"/>
+                            <constraint firstItem="CM6-83-hQl" firstAttribute="leading" secondItem="iE2-vy-xBu" secondAttribute="leadingMargin" constant="-11" id="VxE-O4-4wf"/>
+                            <constraint firstItem="f3I-R0-vCu" firstAttribute="centerX" secondItem="CM6-83-hQl" secondAttribute="centerX" id="bRp-vN-ksx"/>
+                            <constraint firstItem="2Q4-61-KyH" firstAttribute="top" secondItem="f3I-R0-vCu" secondAttribute="bottom" constant="284" id="tK0-wO-0jf"/>
+                            <constraint firstItem="CM6-83-hQl" firstAttribute="top" secondItem="Z9v-hZ-Jqq" secondAttribute="bottom" constant="193" id="vnb-sO-AQQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Time" image="clock40" id="HOg-b3-kBs"/>
                     <connections>
@@ -70,11 +87,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="8Vc-sK-AeO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="8Vc-sK-AeO">
                                 <rect key="frame" x="-177" y="-308" width="675" height="1185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="675" id="380-lk-M6y"/>
+                                    <constraint firstAttribute="height" constant="1185" id="Jqw-MS-OfK"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-Vb-lGi">
-                                <rect key="frame" x="27" y="248" width="266" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-Vb-lGi">
+                                <rect key="frame" x="0.0" y="248" width="320" height="72"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Date">
                                         <attributes>
@@ -102,8 +123,8 @@ Cg
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxv-3G-f6i">
-                                <rect key="frame" x="54" y="169" width="212" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="jxv-3G-f6i">
+                                <rect key="frame" x="60" y="169" width="200" height="66"/>
                                 <attributedString key="attributedText">
                                     <fragment content="DATE JACOBIN:">
                                         <attributes>
@@ -117,8 +138,22 @@ Cg
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Vc-sK-AeO" firstAttribute="centerY" secondItem="jIu-Vb-lGi" secondAttribute="centerY" id="4c0-tq-QQG"/>
+                            <constraint firstItem="1UJ-jj-uNy" firstAttribute="top" secondItem="jIu-Vb-lGi" secondAttribute="bottom" constant="199" id="5jB-JO-rDQ"/>
+                            <constraint firstItem="jIu-Vb-lGi" firstAttribute="leading" secondItem="6Xs-NB-o2u" secondAttribute="leading" id="b7a-U9-zjK"/>
+                            <constraint firstItem="jIu-Vb-lGi" firstAttribute="centerY" secondItem="6Xs-NB-o2u" secondAttribute="centerY" id="d6S-7u-dBa"/>
+                            <constraint firstAttribute="trailing" secondItem="jIu-Vb-lGi" secondAttribute="trailing" id="iVa-43-Lcc"/>
+                            <constraint firstItem="jxv-3G-f6i" firstAttribute="centerX" secondItem="jIu-Vb-lGi" secondAttribute="centerX" id="nyo-B1-qRv"/>
+                            <constraint firstItem="jxv-3G-f6i" firstAttribute="leading" secondItem="6Xs-NB-o2u" secondAttribute="leadingMargin" constant="44" id="r5w-rb-ceo"/>
+                            <constraint firstItem="jIu-Vb-lGi" firstAttribute="top" secondItem="jxv-3G-f6i" secondAttribute="bottom" constant="13" id="vBl-Qq-HH2"/>
+                            <constraint firstItem="jxv-3G-f6i" firstAttribute="top" secondItem="hC0-O1-Uc2" secondAttribute="bottom" constant="149" id="ysk-qw-M49"/>
+                            <constraint firstItem="8Vc-sK-AeO" firstAttribute="centerX" secondItem="jIu-Vb-lGi" secondAttribute="centerX" id="yyj-ei-KBr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Date" image="date35" id="AbS-UT-zUS"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="DateLabel" destination="jIu-Vb-lGi" id="eJk-FD-YQZ"/>
                         <outlet property="dateTabItem" destination="AbS-UT-zUS" id="BaD-qc-4NC"/>
@@ -163,11 +198,48 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="jXg-G5-iGt">
-                                <rect key="frame" x="-177" y="-308" width="675" height="1185"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="TYv-Zc-3NL">
+                                <rect key="frame" x="-178" y="-308" width="675" height="1185"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1185" id="9Bo-Ti-PKq"/>
+                                    <constraint firstAttribute="width" constant="675" id="ODR-1E-7ip"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPU-Pi-oCu">
-                                <rect key="frame" x="7" y="28" width="306" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="306" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-JF-g9M">
+                                <rect key="frame" x="7" y="316" width="306" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="o4h-lh-DMx"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Arbitrary date label">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="23" name="Didot"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="R60-yf-KCe">
+                                <rect key="frame" x="0.0" y="155" width="320" height="162"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="442605048.94696897">
+                                    <!--2015-01-10 17:50:48 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-6572581622">
+                                    <!--1792-09-21 10:52:58 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="changeArbitraryDate:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cgq-Qy-WJC"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="NPU-Pi-oCu">
+                                <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TTN-EM-aly"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <attributedString key="attributedText">
                                     <fragment content="CONVERT A DATE:">
                                         <attributes>
@@ -195,34 +267,21 @@ Cg
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbS-JF-g9M">
-                                <rect key="frame" x="9" y="290" width="306" height="81"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Arbitrary date label">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="23" name="Didot"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="R60-yf-KCe">
-                                <rect key="frame" x="0.0" y="131" width="320" height="162"/>
-                                <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <date key="date" timeIntervalSinceReferenceDate="442605048.94696897">
-                                    <!--2015-01-10 17:50:48 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-6572581622">
-                                    <!--1792-09-21 10:52:58 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="changeArbitraryDate:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cgq-Qy-WJC"/>
-                                </connections>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TYv-Zc-3NL" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="34M-44-avS"/>
+                            <constraint firstItem="NPU-Pi-oCu" firstAttribute="centerX" secondItem="TYv-Zc-3NL" secondAttribute="centerX" id="6r6-6M-5X4"/>
+                            <constraint firstItem="NPU-Pi-oCu" firstAttribute="top" secondItem="Cgc-I3-HEB" secondAttribute="bottom" constant="8" symbolic="YES" id="AjK-eD-KEq"/>
+                            <constraint firstItem="Tcu-SV-3mo" firstAttribute="top" secondItem="R60-yf-KCe" secondAttribute="bottom" constant="202" id="FPs-Wd-C6F"/>
+                            <constraint firstItem="R60-yf-KCe" firstAttribute="leading" secondItem="NPU-Pi-oCu" secondAttribute="leading" id="LgJ-2m-q7w"/>
+                            <constraint firstItem="Tcu-SV-3mo" firstAttribute="top" secondItem="GbS-JF-g9M" secondAttribute="bottom" constant="46" id="THf-IU-5Iz"/>
+                            <constraint firstItem="GbS-JF-g9M" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-9" id="Vg1-SH-afT"/>
+                            <constraint firstItem="GbS-JF-g9M" firstAttribute="centerX" secondItem="R60-yf-KCe" secondAttribute="centerX" id="eUw-kc-fnC"/>
+                            <constraint firstItem="NPU-Pi-oCu" firstAttribute="trailing" secondItem="R60-yf-KCe" secondAttribute="trailing" id="fb8-nQ-tq7"/>
+                            <constraint firstItem="R60-yf-KCe" firstAttribute="top" secondItem="NPU-Pi-oCu" secondAttribute="bottom" constant="27" id="qYG-HJ-C2n"/>
+                            <constraint firstItem="TYv-Zc-3NL" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ywB-lm-dkm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Look Up" image="search35" id="qvU-wY-2Hf"/>
                     <connections>
@@ -292,7 +351,7 @@ Cgo
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content">The French Republican Calendar was used officially from 1793 through the end of 1805. The calendar starts with the beginning of the Republican Era and the abolition of the Bourbon monarchy on September 22nd 1792. It was created by a commission headed by Gilbert Romme. Along with the adoption of the Republican calendar the Jacobins also instituted a number of other reforms with the goals of eliminating traces of Ancien Régime influence and adopting decimal unit schemes. These reforms include the metric system, decimal time and decimal currency. Over the years of French Republic and into the Napoleonic Era the more revolutionary of these reforms were eliminated partly as part of a rapprochement with the Vatican (which strongly favored the seven day week) and partly as a broader tempering of revolutionary fervor. Napoleon abolished the calendar wholesale in 1805, by which time Republicanism itself had long been a dead letter. However, the metric system of units and decimal currency and many of the reforms instituted by Napoleon as Emperor are alive and well to this day.</string>
+                                                <mutableString key="content">The French Republican Calendar was used officially from 1793 through the end of 1805. The calendar starts with the beginning of the Republican Era and the abolition of the Bourbon monarchy on September 22nd 1792. It was created by a commission headed by Gilbert Romme. Along with the adoption of the Republican calendar the Jacobins also instituted a number of other reforms with the goals of eliminating traces of Ancien Régime influence and adopting decimal unit schemes. These reforms include the metric system, decimal time and decimal currency. Over the years of French Republic and into the Napoleonic Era the more revolutionary of these reforms were eliminated partly as part of a rapprochement with the Vatican (which strongly favored the seven day week) and partly as a broader tempering of revolutionary fervor. Napoleon abolished the calendar wholesale in 1805, by which time Republicanism itself had long been a dead letter. However, the metric system of units and decimal currency and many of the reforms instituted by Napoleon as Emperor are alive and well to this day.</mutableString>
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="17" name="Avenir-Book"/>

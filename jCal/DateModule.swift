@@ -43,7 +43,7 @@ func get_days_since_abolition() -> Int {
 }
 
 func get_days_between_abolition(date_string: String) -> Int {
-    let flags: NSCalendarUnit = [.NSDayCalendarUnit, .NSMonthCalendarUnit, .NSYearCalendarUnit]
+    let _: NSCalendarUnit = [.NSDayCalendarUnit, .NSMonthCalendarUnit, .NSYearCalendarUnit]
     let monarch_abolishion_date = "9-21-1792"
     let dateFormatter = NSDateFormatter()
     dateFormatter.dateFormat = "MM-dd-yyyy"
