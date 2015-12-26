@@ -307,8 +307,12 @@ Cg
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="BL7-ds-byU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="BL7-ds-byU">
                                 <rect key="frame" x="-177" y="-308" width="675" height="1185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="675" id="bR8-vH-hN6"/>
+                                    <constraint firstAttribute="height" constant="1185" id="d3N-vE-YLF"/>
+                                </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbx-xe-SXW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="1176"/>
@@ -379,6 +383,10 @@ Cgo
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BL7-ds-byU" firstAttribute="centerY" secondItem="obp-J2-Szo" secondAttribute="centerY" id="7z0-et-f64"/>
+                            <constraint firstItem="BL7-ds-byU" firstAttribute="centerX" secondItem="obp-J2-Szo" secondAttribute="centerX" id="phw-tX-NNd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="about35" id="rfp-vg-edz"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
