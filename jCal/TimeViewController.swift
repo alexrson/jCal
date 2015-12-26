@@ -24,7 +24,7 @@ class TimeViewController: UIViewController {
     func update() {
         // Decimal Time
         var decimal_time = get_decimal_time()
-        displayTimeLabel.text = decimal_time + "\n"
+        displayTimeLabel.text = (decimal_time as String) + "\n"
        
     }
 

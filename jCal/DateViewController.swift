@@ -25,7 +25,7 @@ class DateViewController: UIViewController {
     func update() {
         // Date
         let today = get_today_fdate(0)
-        self.DateLabel?.text = today.french_date + "\n" + today.french_name
+        self.DateLabel?.text = (today.french_date as String) + "\n" + (today.french_name as String)
     }
     
     override func prefersStatusBarHidden() -> Bool {

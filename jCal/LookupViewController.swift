@@ -24,7 +24,7 @@ class LookupViewController: UIViewController {
     
     func updateArbitrary() {
         var greg_date = gregDatePicker.date
-        let arbitrary_french_date = get_fdate(greg_date, 0)
+        let arbitrary_french_date = get_fdate(greg_date, leap_method: 0)
         arbitraryDateInJacobin.text = (arbitrary_french_date.french_date +
             ", " + arbitrary_french_date.french_name)
     }

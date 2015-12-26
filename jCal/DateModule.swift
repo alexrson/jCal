@@ -9,17 +9,17 @@
 import Foundation
 
 func get_today_fdate(leap_add: Int) -> (french_date: NSString, french_name: NSString) {
-    return get_fdate(NSDate(),leap_add)
+    return get_fdate(NSDate(),leap_method: leap_add)
 }
 
 func get_fdate(greg_date: NSDate, leap_method: Int) -> (french_date: NSString, french_name: NSString) {
-    let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+    let flags: NSCalendarUnit = [.NSDayCalendarUnit, .NSMonthCalendarUnit, .NSYearCalendarUnit]
     let components = NSCalendar.currentCalendar().components(flags, fromDate: greg_date)
     let year = components.year
     let month = components.month
     let day = components.day
     let date_string = String(month) + "-" + String(day) + "-" + String(year)
-    var num_days = get_days_between_abolition(date_string)
+    let num_days = get_days_between_abolition(date_string)
     let french_date = computeFrenchDate(num_days)
     var french_name = "C'est un jour complémentaire!"
     for (_french_date, day_name) in jacobin_day2name {
@@ -33,7 +33,7 @@ func get_fdate(greg_date: NSDate, leap_method: Int) -> (french_date: NSString, f
 
 func get_days_since_abolition() -> Int {
     let date = NSDate()
-    let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+    let flags: NSCalendarUnit = [.NSDayCalendarUnit, .NSMonthCalendarUnit, .NSYearCalendarUnit]
     let components = NSCalendar.currentCalendar().components(flags, fromDate: date)
     let year = components.year
     let month = components.month
@@ -43,15 +43,15 @@ func get_days_since_abolition() -> Int {
 }
 
 func get_days_between_abolition(date_string: String) -> Int {
-    let flags: NSCalendarUnit = .DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit
+    let flags: NSCalendarUnit = [.NSDayCalendarUnit, .NSMonthCalendarUnit, .NSYearCalendarUnit]
     let monarch_abolishion_date = "9-21-1792"
     let dateFormatter = NSDateFormatter()
     dateFormatter.dateFormat = "MM-dd-yyyy"
     let startDate:NSDate! = dateFormatter.dateFromString(monarch_abolishion_date)
     let endDate:NSDate! = dateFormatter.dateFromString(date_string)
     let cal = NSCalendar.currentCalendar()
-    let unit:NSCalendarUnit = .DayCalendarUnit
-    let comp = cal.components(unit, fromDate: startDate, toDate: endDate, options: nil)
+    let unit:NSCalendarUnit = .NSDayCalendarUnit
+    let comp = cal.components(unit, fromDate: startDate, toDate: endDate, options: [])
     let total_days = Int(comp.day) // verify
     return total_days
 }
@@ -65,7 +65,7 @@ func rnConverter(arab_number: Int) -> String
     var remainder = 0
     var romanNumeral = "" // accumulated final out
     Ms = Int(arab_number / 1000)
-    romanNumeral += "".join(Array(count: Ms, repeatedValue: "M"))
+    romanNumeral += Array(count: Ms, repeatedValue: "M").joinWithSeparator("")
     remainder = arab_number % 1000
     if (remainder == 999)
     {
@@ -98,7 +98,7 @@ func rnConverter(arab_number: Int) -> String
         remainder -= 400
     }
     Cs = Int(remainder / 100)
-    romanNumeral += "".join(Array(count: Cs, repeatedValue: "C"))
+    romanNumeral += Array(count: Cs, repeatedValue: "C").joinWithSeparator("")
     remainder = remainder % 100
     if (remainder == 99)
     {
@@ -121,7 +121,7 @@ func rnConverter(arab_number: Int) -> String
         remainder -= 40
     }
     Xs = Int(remainder / 10)
-    romanNumeral += "".join(Array(count: Xs, repeatedValue: "X"))
+    romanNumeral += Array(count: Xs, repeatedValue: "X").joinWithSeparator("")
     remainder = remainder % 10
     if remainder == 9
     {
@@ -138,7 +138,7 @@ func rnConverter(arab_number: Int) -> String
         romanNumeral = romanNumeral + "IV"
         remainder -= 4
     }
-    romanNumeral += "".join(Array(count: remainder, repeatedValue: "I"))
+    romanNumeral += Array(count: remainder, repeatedValue: "I").joinWithSeparator("")
     return romanNumeral
 }
 
@@ -221,15 +221,15 @@ func computeFrenchDate(total_days : Int) -> String
             revmonth = "Error"
         }
     }
-    var romnum = rnConverter(revyr)
-    var answer = String(revday) + " " + String(revmonth) + " " + romnum
+    let romnum = rnConverter(revyr)
+    let answer = String(revday) + " " + String(revmonth) + " " + romnum
     return answer
 }
 
 func get_decimal_time() -> NSString {
     let date = NSDate()
     let calendar = NSCalendar.currentCalendar()
-    let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute | .CalendarUnitSecond, fromDate: date)
+    let components = calendar.components([.Hour, .Minute, .Second], fromDate: date)
     let hours = components.hour
     let minutes = components.minute
     let seconds = components.second

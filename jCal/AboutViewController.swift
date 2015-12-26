@@ -14,7 +14,7 @@ class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
+        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.numberOfTouchesRequired = 1
         scrollView.addGestureRecognizer(doubleTapRecognizer)
