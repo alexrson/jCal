@@ -25,8 +25,8 @@
                                     <constraint firstAttribute="width" constant="675" id="dZ3-28-6w8"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3I-R0-vCu">
-                                <rect key="frame" x="22" y="169" width="274" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3I-R0-vCu">
+                                <rect key="frame" x="23" y="179" width="274" height="66"/>
                                 <attributedString key="attributedText">
                                     <fragment content="DÉCIMAL TEMPS:">
                                         <attributes>
@@ -38,8 +38,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM6-83-hQl">
-                                <rect key="frame" x="5" y="213" width="309" height="63"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM6-83-hQl">
+                                <rect key="frame" x="6" y="253" width="309" height="63"/>
                                 <attributedString key="attributedText">
                                     <fragment content="00:00:00">
                                         <attributes>
@@ -54,16 +54,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="f3I-R0-vCu" firstAttribute="top" secondItem="Z9v-hZ-Jqq" secondAttribute="bottom" constant="149" id="6Yq-xi-bCb"/>
-                            <constraint firstItem="2Q4-61-KyH" firstAttribute="top" secondItem="CM6-83-hQl" secondAttribute="bottom" constant="243" id="Cvy-R3-jAb"/>
                             <constraint firstItem="f3I-R0-vCu" firstAttribute="leading" secondItem="iE2-vy-xBu" secondAttribute="leadingMargin" constant="6" id="E47-PG-xjr"/>
                             <constraint firstItem="TWb-Qj-SlH" firstAttribute="centerY" secondItem="iE2-vy-xBu" secondAttribute="centerY" id="Mo2-Pg-zrn"/>
                             <constraint firstItem="TWb-Qj-SlH" firstAttribute="centerX" secondItem="iE2-vy-xBu" secondAttribute="centerX" id="NOb-Ji-DgJ"/>
                             <constraint firstItem="CM6-83-hQl" firstAttribute="centerX" secondItem="iE2-vy-xBu" secondAttribute="centerX" id="VSc-0Q-Udo"/>
                             <constraint firstItem="CM6-83-hQl" firstAttribute="leading" secondItem="iE2-vy-xBu" secondAttribute="leadingMargin" constant="-11" id="VxE-O4-4wf"/>
                             <constraint firstItem="f3I-R0-vCu" firstAttribute="centerX" secondItem="CM6-83-hQl" secondAttribute="centerX" id="bRp-vN-ksx"/>
-                            <constraint firstItem="2Q4-61-KyH" firstAttribute="top" secondItem="f3I-R0-vCu" secondAttribute="bottom" constant="284" id="tK0-wO-0jf"/>
-                            <constraint firstItem="CM6-83-hQl" firstAttribute="top" secondItem="Z9v-hZ-Jqq" secondAttribute="bottom" constant="193" id="vnb-sO-AQQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Time" image="clock40" id="HOg-b3-kBs"/>
@@ -94,7 +90,7 @@
                                     <constraint firstAttribute="height" constant="1185" id="Jqw-MS-OfK"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-Vb-lGi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-Vb-lGi">
                                 <rect key="frame" x="0.0" y="248" width="320" height="72"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Date">
@@ -123,7 +119,7 @@ Cg
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="jxv-3G-f6i">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="jxv-3G-f6i">
                                 <rect key="frame" x="60" y="169" width="200" height="66"/>
                                 <attributedString key="attributedText">
                                     <fragment content="DATE JACOBIN:">
@@ -140,7 +136,6 @@ Cg
                         <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8Vc-sK-AeO" firstAttribute="centerY" secondItem="jIu-Vb-lGi" secondAttribute="centerY" id="4c0-tq-QQG"/>
-                            <constraint firstItem="1UJ-jj-uNy" firstAttribute="top" secondItem="jIu-Vb-lGi" secondAttribute="bottom" constant="199" id="5jB-JO-rDQ"/>
                             <constraint firstItem="jIu-Vb-lGi" firstAttribute="leading" secondItem="6Xs-NB-o2u" secondAttribute="leading" id="b7a-U9-zjK"/>
                             <constraint firstItem="jIu-Vb-lGi" firstAttribute="centerY" secondItem="6Xs-NB-o2u" secondAttribute="centerY" id="d6S-7u-dBa"/>
                             <constraint firstAttribute="trailing" secondItem="jIu-Vb-lGi" secondAttribute="trailing" id="iVa-43-Lcc"/>
@@ -360,7 +355,7 @@ Cgo
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <mutableString key="content">The French Republican Calendar was used officially from 1793 through the end of 1805. The calendar starts with the beginning of the Republican Era and the abolition of the Bourbon monarchy on September 22nd 1792. It was created by a commission headed by Gilbert Romme. Along with the adoption of the Republican calendar the Jacobins also instituted a number of other reforms with the goals of eliminating traces of Ancien Régime influence and adopting decimal unit schemes. These reforms include the metric system, decimal time and decimal currency. Over the years of French Republic and into the Napoleonic Era the more revolutionary of these reforms were eliminated partly as part of a rapprochement with the Vatican (which strongly favored the seven day week) and partly as a broader tempering of revolutionary fervor. Napoleon abolished the calendar wholesale in 1805, by which time Republicanism itself had long been a dead letter. However, the metric system of units and decimal currency and many of the reforms instituted by Napoleon as Emperor are alive and well to this day.</mutableString>
+                                                <string key="content">The French Republican Calendar was used officially from 1793 through the end of 1805. The calendar starts with the beginning of the Republican Era and the abolition of the Bourbon monarchy on September 22nd 1792. It was created by a commission headed by Gilbert Romme. Along with the adoption of the Republican calendar the Jacobins also instituted a number of other reforms with the goals of eliminating traces of Ancien Régime influence and adopting decimal unit schemes. These reforms include the metric system, decimal time and decimal currency. Over the years of French Republic and into the Napoleonic Era the more revolutionary of these reforms were eliminated partly as part of a rapprochement with the Vatican (which strongly favored the seven day week) and partly as a broader tempering of revolutionary fervor. Napoleon abolished the calendar wholesale in 1805, by which time Republicanism itself had long been a dead letter. However, the metric system of units and decimal currency and many of the reforms instituted by Napoleon as Emperor are alive and well to this day.</string>
                                                 <attributes>
                                                     <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="17" name="Avenir-Book"/>
