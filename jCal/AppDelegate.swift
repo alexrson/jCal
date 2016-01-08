@@ -3,7 +3,7 @@
 //  jCal
 //
 //  Created by Alexander Robertson on 12/23/14.
-//  Copyright (c) 2014 Alexander Robertson. All rights reserved.
+//  Copyright (c) 2016 Alexander Robertson. All rights reserved.
 //
 
 import UIKit
