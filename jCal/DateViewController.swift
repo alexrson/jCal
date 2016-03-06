@@ -9,6 +9,7 @@
 import UIKit
 
 class DateViewController: UIViewController {
+    var timer = NSTimer()
     @IBOutlet var DateLabel : UILabel?
     @IBOutlet var dateTabItem: UITabBarItem!
 
@@ -16,6 +17,9 @@ class DateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         update()
+        let aSelector : Selector = "update"
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01,
+            target: self, selector: aSelector, userInfo: nil, repeats: true)
     }
     
     override func didReceiveMemoryWarning() {
